@@ -159,6 +159,7 @@ main{
 }
 
 #pokemonCard h3{
+    font-size: clamp(0.5em, 1.5vw, 5em);
     display: flex;
     justify-content: center;
     align-items: center;
