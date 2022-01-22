@@ -1,0 +1,221 @@
+/*      Initial configurations      */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #14213d;
+    --txt-color: #ffffff;
+    --contrast: #fca311;
+    --selection: #3C64B9;
+
+    --font: 'Outfit', sans-serif;
+    --light: 100;
+    --bold: 700;
+}
+
+
+
+
+::selection{
+    background-color: var(--selection);
+}
+
+
+
+/*      Body Styles      */
+body{
+    background-color: var(--contrast);
+    color: var(--txt-color);
+}
+
+
+
+
+/*      Header Styles      */
+header{
+    background-color: var(--bg-color);
+}
+
+header ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+header li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: var(--txt-color);
+    font-family: var(--font);
+    font-weight: var(--light);
+}
+
+header li img{
+    max-width: 48px;
+    width: 10vw;
+    min-width: 20px;
+}
+
+header li span{
+    font-size: clamp(0.5em, 1.5vw, 5em);
+}
+
+
+
+
+/*      Initial configurations      */
+main{
+    background-color: var(--bg-color);
+    min-height: 50vh;
+    font-family: var(--font);
+    font-weight: var(--bold);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--contrast);
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--txt-color);
+} 
+
+
+
+
+/*      Spinner Animation        */
+#spinnerDiv{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    margin: clamp(0.75em, 3vw, 3em);
+    border: min(1vw, 10px) solid var(--txt-color);
+    border-left: min(1vw, 10px) solid #000;
+    animation: spinn 1s infinite linear;
+}
+
+@keyframes spinn {
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg);}
+}
+
+
+
+/*      Pokemon Card        */
+#pokemonContainer{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokemonCard{
+    background-color: var(--contrast);
+    border: min(0.5vw, 5px) solid var(--txt-color);
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#pokemonCard img{
+    width: clamp(75px, 10vw, 200px)
+}
+
+#pokemonCard h2{
+    font-size: clamp(0.75em, 2.5vw, 7em);
+}
+
+#pokemonCard span{
+    display: block;
+    font-size: clamp(0.5em, 1.5vw, 5em);
+    font-weight: var(--light);
+    background-color: var(--bg-color);
+    padding: min(1vw, 0.5em);
+}
+
+#pokemonCard .pokemonID{
+    display: inline;
+}
+
+
+
+
+/*      Form Section        */
+form{
+    font-size: clamp(0.75em, 2.5vw, 5em);
+    text-align: center;
+    width: 50%;
+    margin: min(10vw, 2.5em) auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+    display: block;
+    margin: min(5vw, 0.5em);
+
+}
+
+input{
+    text-align: end;
+    padding: min(1vw, 0.5em);
+    border: min(1vw, 1px) solid var(--txt-color);
+    border-radius: min(1vw, 5px);
+    font-weight: var(--bold);
+    font-size: clamp(0.75em, 1.5vw, 2.5em);
+    transition: all 300ms ease-in-out;
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    transform: scale(0.9);
+}
+
+#searchButton{
+    border: min(1vw, 1px) solid var(--txt-color);
+    padding: min(1vw, 0.5em);
+    margin: min(5vw, 0.5em);
+}
+
+input:hover,
+input:active,
+input:focus{
+    background-color: var(--contrast);
+    transform: scale(1);
+    outline: var(--txt-color);
+    border: 1px solid var(--txt-color);
+}
+
+svg{
+    display: block;
+}
+
+svg path{
+    fill: var(--bg-color);
+}
+
